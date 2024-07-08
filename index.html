@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [chat app]</title>
+
+  <!-- Tailwind Initialize -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Font */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+    * {
+      font-family: "Rubik", sans-serif;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'serif': ["Rubik", "sans-serif"]
+        },
+        outlineWidth: {
+          9: '9px',
+        },
+        extend: {
+          colors: {
+            white: "hsl(0, 0%, 100%)",
+            lightGrayishViolet: "hsl(270, 20%, 96%)",
+            veryLightMagenta: "hsl(289, 100%, 72%)",
+            paleViolet: "hsl(276, 100%, 81%)",
+            moderateViolet: "hsl(276, 55%, 52%)",
+            moderateVioletOpacity: {
+              10:  "hsla(276, 55%, 52%, 0.1)",
+              20:  "hsla(276, 55%, 52%, 0.2)",
+              30:  "hsla(276, 55%, 52%, 0.3)",
+              40:  "hsla(276, 55%, 52%, 0.4)",
+              50:  "hsla(276, 55%, 52%, 0.5)",
+              60:  "hsla(276, 55%, 52%, 0.6)",
+              70:  "hsla(276, 55%, 52%, 0.7)",
+              80:  "hsla(276, 55%, 52%, 0.8)",
+              90:  "hsla(276, 55%, 52%, 0.9)",
+              100: "hsla(276, 55%, 52%, 1.0)",
+            },
+            desaturatedDarkViolet: "hsl(271, 15%, 43%)",
+            grayishBlue: "hsl(206, 6%, 79%)",
+            veryDarkDesaturatedViolet: "hsl(271, 36%, 24%)",
+            darkGrayishViolet: "hsl(270, 7%, 64%)",
+            lightMagenta: "hsl(293, 100%, 63%)",
+            lightViolet: "hsl(264, 100%, 61%)",
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <main>
+    <div class="w-60 h-[620px] md:w-3/12 md:h-[900px] rounded-br-full absolute z-[-100] bg-gradient-to-t from-lightViolet to-lightMagenta"></div>
+    <div class="flex flex-col md:flex-row gap-10 md:gap-24 align-center items-center justify-center h-screen ">
+   
+        <section class="bg-lightGrayishViolet mx-auto w-[350px] shadow-2xl rounded-[40px] border-white border-[13px] m-7 md:m-0">
+          <header class="bg-gradient-to-r from-lightViolet to-lightMagenta flex justify-between relative px-5 pt-9 pb-4 rounded-xl text-white items-center">
+            <div class="absolute top-0 left-0 right-0 flex items-center justify-center">
+              <div class="h-7 w-40 bg-white rounded-b-2xl"></div>
+            </div>
+            <span class="flex gap-2 items-center">
+              <div class="flex gap-2">
+                <div class="relative -rotate-90 flex items-center justify-center">
+                  <span class="w-[10px] h-[3px] bg-white block transform -rotate-45 translate-x-[2.6px]"></span>
+                  <span class="w-[10px] h-[3px] bg-white block transform rotate-45 translate-x-[-2.6px]"></span>
+                </div>
+                <img class="rounded-full w-9 border-2" src="./images/avatar.jpg" alt="avatar image">
+              </div>
+              <div>
+                <h2 class="font-bold">Samuel Green</h2>
+                <p class="text-xs text-white opacity-50">Available to Walk</p>
+              </div>
+            </span>
+            <div class="flex flex-col gap-[2px]">
+              <span class="w-1 h-1 rounded-full bg-white opacity-75"></span>
+              <span class="w-1 h-1 rounded-full bg-white opacity-75"></span>
+              <span class="w-1 h-1 rounded-full bg-white opacity-75"></span>
+            </div>
+          </header>
+          <div class="p-3 grid gap-3">
+            <span class="text-moderateViolet inline-block text-xs max-w-48 pt-2 pr-1 pb-2 pl-2 rounded-xl rounded-bl-md bg-moderateVioletOpacity-10">
+              <p>That sounds great. I’d be happy with that.</p>
+            </span>
+            <span class="text-moderateViolet inline-block text-xs max-w-48 pt-2 pr-1 pb-2 pl-2 rounded-xl rounded-bl-md bg-moderateVioletOpacity-10">
+              <p>Could you send over some pictures of your dog, please?</p>
+            </span>
+            <span class="flex gap-2 justify-self-end">
+              <img class="w-8/9 h-14 rounded-xl" src="./images/dog-image-1.jpg" alt="">
+              <img class="w-8/9 h-14 rounded-xl" src="./images/dog-image-2.jpg" alt="">
+              <img class="w-8/9 h-14 rounded-xl" src="./images/dog-image-3.jpg" alt="">
+            </span>
+            <span class="max-w-48 pt-2 pr-1 pb-2 pl-2 text-xs text-desaturatedDarkViolet justify-self-end bg-white shadow-lg rounded-xl rounded-br-md">
+              <p>Here are a few pictures. She’s a happy girl!</p>
+            </span>
+            <span class="max-w-48 pt-2 pr-1 pb-2 pl-2 text-xs text-desaturatedDarkViolet justify-self-end bg-white shadow-lg rounded-xl rounded-br-md">
+              <p>Can you make it?</p>
+            </span>
+            <span class="text-moderateViolet inline-block text-xs max-w-48 pt-2 pr-1 pb-2 pl-2 rounded-xl rounded-bl-md bg-moderateVioletOpacity-10">
+              <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+            </span>
+            <div class="bg-gradient-to-r from-lightMagenta to-lightViolet w-4/5 text-white flex justify-between rounded-xl rounded-bl-md p-3">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 border opacity-50 inline-block rounded-full"></span>
+                <p class="text-xs opacity-75">30 minute walk</p>
+              </div>
+              <h3 class="text-md font-bold">$29</h3>
+            </div>
+            <span class="bg-gradient-to-r from-lightMagenta to-lightViolet w-4/5 text-white flex justify-between rounded-xl rounded-bl-md p-3">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 border opacity-50 inline-block rounded-full"></span>
+                <p class="text-xs opacity-75">1 hour walk</p>
+              </div>
+              <h3 class="text-md font-bold">$49</h3>
+            </span>
+            <div class="rounded-full relative">
+              <input class="w-full rounded-full h-12 p-2 ps-4" type="text" placeholder="Type a message…">
+              <div class="absolute h-12 w-12 right-0 top-0 flex items-center justify-center p-2">
+                <span class="h-full w-full rounded-full bg-veryDarkDesaturatedViolet flex items-center justify-center">
+                  <div class="relative rotate-90 flex items-center justify-center">
+                    <span class="w-[10px] h-[3px] bg-white block transform -rotate-45 translate-x-[2.6px]"></span>
+                    <span class="w-[10px] h-[3px] bg-white block transform rotate-45 translate-x-[-2.6px]"></span>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      
+      <section class="text-center px-10 md:px-0 md:text-left w-[450px] md:w-[500px] leading-6">
+        <h2 class="text-veryDarkDesaturatedViolet font-bold text-[3rem] mb-6">Simple booking</h2>
+        <p class="text-darkGrayishViolet">Stay in touch with our dog walkers through the chat interface. This makes it
+          easy to
+          discuss arrangements and make bookings. Once the walk has been completed you can rate
+          your walker and book again all through the chat.</p>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
